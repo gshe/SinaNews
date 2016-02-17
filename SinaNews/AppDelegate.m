@@ -60,7 +60,10 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
-
+  [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:236 / 255.0
+                                                             green:190 / 255.0
+                                                              blue:146 / 255.0
+                                                             alpha:0.9]];
   UIViewController *rootVC = [self getRootViewController];
   self.window.rootViewController = rootVC;
   [self.window makeKeyAndVisible];
