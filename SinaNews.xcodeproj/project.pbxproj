@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84781D111C740ED80088AB85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D101C740ED80088AB85 /* main.m */; };
+		84781D141C740ED80088AB85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D131C740ED80088AB85 /* AppDelegate.m */; };
+		84781D1A1C740ED80088AB85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84781D181C740ED80088AB85 /* Main.storyboard */; };
+		84781D1C1C740ED80088AB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84781D1B1C740ED80088AB85 /* Assets.xcassets */; };
+		84781D1F1C740ED80088AB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84781D1D1C740ED80088AB85 /* LaunchScreen.storyboard */; };
+		84781D271C740FFC0088AB85 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 84781D261C740FFC0088AB85 /* launch.png */; };
+		84781D391C7413330088AB85 /* FDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D351C7413330088AB85 /* FDTableViewCell.m */; };
+		84781D3A1C7413330088AB85 /* NewsItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D381C7413330088AB85 /* NewsItemCell.m */; };
+		84781D5A1C7414270088AB85 /* RSSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D511C7414270088AB85 /* RSSChannel.m */; };
+		84781D5B1C7414270088AB85 /* RSSChannelDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D531C7414270088AB85 /* RSSChannelDetail.m */; };
+		84781D5C1C7414270088AB85 /* RSSItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D551C7414270088AB85 /* RSSItemModel.m */; };
+		84781D5D1C7414270088AB85 /* RSSRoot.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D571C7414270088AB85 /* RSSRoot.m */; };
+		84781D5E1C7414270088AB85 /* RSSSubChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D591C7414270088AB85 /* RSSSubChannel.m */; };
+		84781D621C74144C0088AB85 /* SinaRSSApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D611C74144C0088AB85 /* SinaRSSApi.m */; };
+		84781D681C74148B0088AB85 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D671C74148B0088AB85 /* MMExampleDrawerVisualStateManager.m */; };
+		84781D7B1C74150A0088AB85 /* base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D761C74150A0088AB85 /* base64.m */; };
+		84781D7C1C74150A0088AB85 /* UIColor+Extents.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D781C74150A0088AB85 /* UIColor+Extents.m */; };
+		84781D7D1C74150A0088AB85 /* XMDeveloperHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D7A1C74150A0088AB85 /* XMDeveloperHelper.m */; };
+		84781D8C1C7415F80088AB85 /* FDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D801C7415F80088AB85 /* FDTableViewController.m */; };
+		84781D8D1C7415F80088AB85 /* FDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D821C7415F80088AB85 /* FDViewController.m */; };
+		84781D8E1C7415F80088AB85 /* FDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D841C7415F80088AB85 /* FDWebViewController.m */; };
+		84781D8F1C7415F80088AB85 /* NewsChannelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D871C7415F80088AB85 /* NewsChannelSelectViewController.m */; };
+		84781D901C7415F80088AB85 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D891C7415F80088AB85 /* NewsListViewController.m */; };
+		84781D911C7415F80088AB85 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D8B1C7415F80088AB85 /* NewsViewController.m */; };
+		84781D9B1C7416CC0088AB85 /* AreaPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D941C7416CC0088AB85 /* AreaPickView.m */; };
+		84781D9C1C7416CC0088AB85 /* PopupBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D961C7416CC0088AB85 /* PopupBaseView.m */; };
+		84781D9D1C7416CC0088AB85 /* XMDateSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D981C7416CC0088AB85 /* XMDateSelectView.m */; };
+		84781D9E1C7416CC0088AB85 /* XWindowStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D9A1C7416CC0088AB85 /* XWindowStack.m */; };
+		84781DA31C7417A10088AB85 /* NSString+Extents.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781DA21C7417A10088AB85 /* NSString+Extents.m */; };
+		84781DA61C741D010088AB85 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781DA51C741D010088AB85 /* SettingsTableViewController.m */; };
+		84781DA91C741DDB0088AB85 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781DA81C741DDB0088AB85 /* AboutViewController.m */; };
+		934C995E5BFE34BD3CD15E49 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 539BA799B937CC19C11FB44C /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		539BA799B937CC19C11FB44C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84781D0C1C740ED80088AB85 /* SinaNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84781D101C740ED80088AB85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84781D121C740ED80088AB85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84781D131C740ED80088AB85 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84781D191C740ED80088AB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84781D1B1C740ED80088AB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84781D1E1C740ED80088AB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84781D201C740ED80088AB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84781D261C740FFC0088AB85 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		84781D321C7411F30088AB85 /* SinaNews-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SinaNews-PrefixHeader.pch"; sourceTree = "<group>"; };
+		84781D341C7413330088AB85 /* FDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTableViewCell.h; sourceTree = "<group>"; };
+		84781D351C7413330088AB85 /* FDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTableViewCell.m; sourceTree = "<group>"; };
+		84781D371C7413330088AB85 /* NewsItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsItemCell.h; sourceTree = "<group>"; };
+		84781D381C7413330088AB85 /* NewsItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsItemCell.m; sourceTree = "<group>"; };
+		84781D501C7414270088AB85 /* RSSChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSChannel.h; sourceTree = "<group>"; };
+		84781D511C7414270088AB85 /* RSSChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSChannel.m; sourceTree = "<group>"; };
+		84781D521C7414270088AB85 /* RSSChannelDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSChannelDetail.h; sourceTree = "<group>"; };
+		84781D531C7414270088AB85 /* RSSChannelDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSChannelDetail.m; sourceTree = "<group>"; };
+		84781D541C7414270088AB85 /* RSSItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItemModel.h; sourceTree = "<group>"; };
+		84781D551C7414270088AB85 /* RSSItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItemModel.m; sourceTree = "<group>"; };
+		84781D561C7414270088AB85 /* RSSRoot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSRoot.h; sourceTree = "<group>"; };
+		84781D571C7414270088AB85 /* RSSRoot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSRoot.m; sourceTree = "<group>"; };
+		84781D581C7414270088AB85 /* RSSSubChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSSubChannel.h; sourceTree = "<group>"; };
+		84781D591C7414270088AB85 /* RSSSubChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSSubChannel.m; sourceTree = "<group>"; };
+		84781D601C74144C0088AB85 /* SinaRSSApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinaRSSApi.h; sourceTree = "<group>"; };
+		84781D611C74144C0088AB85 /* SinaRSSApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinaRSSApi.m; sourceTree = "<group>"; };
+		84781D661C74148B0088AB85 /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
+		84781D671C74148B0088AB85 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
+		84781D751C74150A0088AB85 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		84781D761C74150A0088AB85 /* base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = base64.m; sourceTree = "<group>"; };
+		84781D771C74150A0088AB85 /* UIColor+Extents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extents.h"; sourceTree = "<group>"; };
+		84781D781C74150A0088AB85 /* UIColor+Extents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extents.m"; sourceTree = "<group>"; };
+		84781D791C74150A0088AB85 /* XMDeveloperHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMDeveloperHelper.h; sourceTree = "<group>"; };
+		84781D7A1C74150A0088AB85 /* XMDeveloperHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMDeveloperHelper.m; sourceTree = "<group>"; };
+		84781D7F1C7415F80088AB85 /* FDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTableViewController.h; sourceTree = "<group>"; };
+		84781D801C7415F80088AB85 /* FDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTableViewController.m; sourceTree = "<group>"; };
+		84781D811C7415F80088AB85 /* FDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDViewController.h; sourceTree = "<group>"; };
+		84781D821C7415F80088AB85 /* FDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDViewController.m; sourceTree = "<group>"; };
+		84781D831C7415F80088AB85 /* FDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWebViewController.h; sourceTree = "<group>"; };
+		84781D841C7415F80088AB85 /* FDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWebViewController.m; sourceTree = "<group>"; };
+		84781D861C7415F80088AB85 /* NewsChannelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsChannelSelectViewController.h; sourceTree = "<group>"; };
+		84781D871C7415F80088AB85 /* NewsChannelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsChannelSelectViewController.m; sourceTree = "<group>"; };
+		84781D881C7415F80088AB85 /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
+		84781D891C7415F80088AB85 /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		84781D8A1C7415F80088AB85 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		84781D8B1C7415F80088AB85 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		84781D931C7416CC0088AB85 /* AreaPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaPickView.h; sourceTree = "<group>"; };
+		84781D941C7416CC0088AB85 /* AreaPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaPickView.m; sourceTree = "<group>"; };
+		84781D951C7416CC0088AB85 /* PopupBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopupBaseView.h; sourceTree = "<group>"; };
+		84781D961C7416CC0088AB85 /* PopupBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopupBaseView.m; sourceTree = "<group>"; };
+		84781D971C7416CC0088AB85 /* XMDateSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMDateSelectView.h; sourceTree = "<group>"; };
+		84781D981C7416CC0088AB85 /* XMDateSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMDateSelectView.m; sourceTree = "<group>"; };
+		84781D991C7416CC0088AB85 /* XWindowStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWindowStack.h; sourceTree = "<group>"; };
+		84781D9A1C7416CC0088AB85 /* XWindowStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWindowStack.m; sourceTree = "<group>"; };
+		84781DA01C7417A10088AB85 /* FDFontMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDFontMacro.h; sourceTree = "<group>"; };
+		84781DA11C7417A10088AB85 /* NSString+Extents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extents.h"; sourceTree = "<group>"; };
+		84781DA21C7417A10088AB85 /* NSString+Extents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extents.m"; sourceTree = "<group>"; };
+		84781DA41C741D010088AB85 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		84781DA51C741D010088AB85 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		84781DA71C741DDB0088AB85 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		84781DA81C741DDB0088AB85 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		9D9794FE096853E0152A31D4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A8B3EB3E01141D017AD72E48 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84781D091C740ED80088AB85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				934C995E5BFE34BD3CD15E49 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AA16E429B214A19C4040474 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D9794FE096853E0152A31D4 /* Pods.debug.xcconfig */,
+				A8B3EB3E01141D017AD72E48 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84781D031C740ED80088AB85 = {
+			isa = PBXGroup;
+			children = (
+				84781D0E1C740ED80088AB85 /* SinaNews */,
+				84781D0D1C740ED80088AB85 /* Products */,
+				1AA16E429B214A19C4040474 /* Pods */,
+				8BF30602A287C319EA1B60B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84781D0D1C740ED80088AB85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84781D0C1C740ED80088AB85 /* SinaNews.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84781D0E1C740ED80088AB85 /* SinaNews */ = {
+			isa = PBXGroup;
+			children = (
+				84781D9F1C7417A10088AB85 /* category */,
+				84781D921C7416CC0088AB85 /* view */,
+				84781D7E1C7415F80088AB85 /* ViewController */,
+				84781D741C74150A0088AB85 /* Utils */,
+				84781D5F1C74144C0088AB85 /* NewsApi */,
+				84781D4F1C7414270088AB85 /* JsonModel */,
+				84781D331C7413330088AB85 /* Cell */,
+				84781D661C74148B0088AB85 /* MMExampleDrawerVisualStateManager.h */,
+				84781D671C74148B0088AB85 /* MMExampleDrawerVisualStateManager.m */,
+				84781D181C740ED80088AB85 /* Main.storyboard */,
+				84781D1B1C740ED80088AB85 /* Assets.xcassets */,
+				84781D1D1C740ED80088AB85 /* LaunchScreen.storyboard */,
+				84781D0F1C740ED80088AB85 /* Supporting Files */,
+				84781D321C7411F30088AB85 /* SinaNews-PrefixHeader.pch */,
+			);
+			path = SinaNews;
+			sourceTree = "<group>";
+		};
+		84781D0F1C740ED80088AB85 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84781D121C740ED80088AB85 /* AppDelegate.h */,
+				84781D131C740ED80088AB85 /* AppDelegate.m */,
+				84781D201C740ED80088AB85 /* Info.plist */,
+				84781D261C740FFC0088AB85 /* launch.png */,
+				84781D101C740ED80088AB85 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84781D331C7413330088AB85 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84781D341C7413330088AB85 /* FDTableViewCell.h */,
+				84781D351C7413330088AB85 /* FDTableViewCell.m */,
+				84781D361C7413330088AB85 /* News */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		84781D361C7413330088AB85 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				84781D371C7413330088AB85 /* NewsItemCell.h */,
+				84781D381C7413330088AB85 /* NewsItemCell.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		84781D4F1C7414270088AB85 /* JsonModel */ = {
+			isa = PBXGroup;
+			children = (
+				84781D501C7414270088AB85 /* RSSChannel.h */,
+				84781D511C7414270088AB85 /* RSSChannel.m */,
+				84781D521C7414270088AB85 /* RSSChannelDetail.h */,
+				84781D531C7414270088AB85 /* RSSChannelDetail.m */,
+				84781D541C7414270088AB85 /* RSSItemModel.h */,
+				84781D551C7414270088AB85 /* RSSItemModel.m */,
+				84781D561C7414270088AB85 /* RSSRoot.h */,
+				84781D571C7414270088AB85 /* RSSRoot.m */,
+				84781D581C7414270088AB85 /* RSSSubChannel.h */,
+				84781D591C7414270088AB85 /* RSSSubChannel.m */,
+			);
+			path = JsonModel;
+			sourceTree = "<group>";
+		};
+		84781D5F1C74144C0088AB85 /* NewsApi */ = {
+			isa = PBXGroup;
+			children = (
+				84781D601C74144C0088AB85 /* SinaRSSApi.h */,
+				84781D611C74144C0088AB85 /* SinaRSSApi.m */,
+			);
+			path = NewsApi;
+			sourceTree = "<group>";
+		};
+		84781D741C74150A0088AB85 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84781D751C74150A0088AB85 /* base64.h */,
+				84781D761C74150A0088AB85 /* base64.m */,
+				84781D771C74150A0088AB85 /* UIColor+Extents.h */,
+				84781D781C74150A0088AB85 /* UIColor+Extents.m */,
+				84781D791C74150A0088AB85 /* XMDeveloperHelper.h */,
+				84781D7A1C74150A0088AB85 /* XMDeveloperHelper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		84781D7E1C7415F80088AB85 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84781DA41C741D010088AB85 /* SettingsTableViewController.h */,
+				84781DA51C741D010088AB85 /* SettingsTableViewController.m */,
+				84781D7F1C7415F80088AB85 /* FDTableViewController.h */,
+				84781D801C7415F80088AB85 /* FDTableViewController.m */,
+				84781D811C7415F80088AB85 /* FDViewController.h */,
+				84781D821C7415F80088AB85 /* FDViewController.m */,
+				84781D831C7415F80088AB85 /* FDWebViewController.h */,
+				84781D841C7415F80088AB85 /* FDWebViewController.m */,
+				84781D851C7415F80088AB85 /* News */,
+				84781DA71C741DDB0088AB85 /* AboutViewController.h */,
+				84781DA81C741DDB0088AB85 /* AboutViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		84781D851C7415F80088AB85 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				84781D861C7415F80088AB85 /* NewsChannelSelectViewController.h */,
+				84781D871C7415F80088AB85 /* NewsChannelSelectViewController.m */,
+				84781D881C7415F80088AB85 /* NewsListViewController.h */,
+				84781D891C7415F80088AB85 /* NewsListViewController.m */,
+				84781D8A1C7415F80088AB85 /* NewsViewController.h */,
+				84781D8B1C7415F80088AB85 /* NewsViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		84781D921C7416CC0088AB85 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				84781D931C7416CC0088AB85 /* AreaPickView.h */,
+				84781D941C7416CC0088AB85 /* AreaPickView.m */,
+				84781D951C7416CC0088AB85 /* PopupBaseView.h */,
+				84781D961C7416CC0088AB85 /* PopupBaseView.m */,
+				84781D971C7416CC0088AB85 /* XMDateSelectView.h */,
+				84781D981C7416CC0088AB85 /* XMDateSelectView.m */,
+				84781D991C7416CC0088AB85 /* XWindowStack.h */,
+				84781D9A1C7416CC0088AB85 /* XWindowStack.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		84781D9F1C7417A10088AB85 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				84781DA01C7417A10088AB85 /* FDFontMacro.h */,
+				84781DA11C7417A10088AB85 /* NSString+Extents.h */,
+				84781DA21C7417A10088AB85 /* NSString+Extents.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		8BF30602A287C319EA1B60B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				539BA799B937CC19C11FB44C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84781D0B1C740ED80088AB85 /* SinaNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84781D231C740ED80088AB85 /* Build configuration list for PBXNativeTarget "SinaNews" */;
+			buildPhases = (
+				4231062CAAEBC596A8166EA1 /* Check Pods Manifest.lock */,
+				84781D081C740ED80088AB85 /* Sources */,
+				84781D091C740ED80088AB85 /* Frameworks */,
+				84781D0A1C740ED80088AB85 /* Resources */,
+				6EE9A0E4315AD1D15617EDF2 /* Embed Pods Frameworks */,
+				05F77E6882E2D746E2315ACC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SinaNews;
+			productName = SinaNews;
+			productReference = 84781D0C1C740ED80088AB85 /* SinaNews.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84781D041C740ED80088AB85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Freedom;
+				TargetAttributes = {
+					84781D0B1C740ED80088AB85 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = M7UKXJFB5U;
+					};
+				};
+			};
+			buildConfigurationList = 84781D071C740ED80088AB85 /* Build configuration list for PBXProject "SinaNews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84781D031C740ED80088AB85;
+			productRefGroup = 84781D0D1C740ED80088AB85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84781D0B1C740ED80088AB85 /* SinaNews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84781D0A1C740ED80088AB85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84781D271C740FFC0088AB85 /* launch.png in Resources */,
+				84781D1F1C740ED80088AB85 /* LaunchScreen.storyboard in Resources */,
+				84781D1C1C740ED80088AB85 /* Assets.xcassets in Resources */,
+				84781D1A1C740ED80088AB85 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F77E6882E2D746E2315ACC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4231062CAAEBC596A8166EA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6EE9A0E4315AD1D15617EDF2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84781D081C740ED80088AB85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84781D5A1C7414270088AB85 /* RSSChannel.m in Sources */,
+				84781D9C1C7416CC0088AB85 /* PopupBaseView.m in Sources */,
+				84781D681C74148B0088AB85 /* MMExampleDrawerVisualStateManager.m in Sources */,
+				84781D911C7415F80088AB85 /* NewsViewController.m in Sources */,
+				84781D9B1C7416CC0088AB85 /* AreaPickView.m in Sources */,
+				84781D7C1C74150A0088AB85 /* UIColor+Extents.m in Sources */,
+				84781D141C740ED80088AB85 /* AppDelegate.m in Sources */,
+				84781D111C740ED80088AB85 /* main.m in Sources */,
+				84781DA61C741D010088AB85 /* SettingsTableViewController.m in Sources */,
+				84781D5E1C7414270088AB85 /* RSSSubChannel.m in Sources */,
+				84781D7B1C74150A0088AB85 /* base64.m in Sources */,
+				84781D9D1C7416CC0088AB85 /* XMDateSelectView.m in Sources */,
+				84781D5D1C7414270088AB85 /* RSSRoot.m in Sources */,
+				84781D7D1C74150A0088AB85 /* XMDeveloperHelper.m in Sources */,
+				84781D5B1C7414270088AB85 /* RSSChannelDetail.m in Sources */,
+				84781DA31C7417A10088AB85 /* NSString+Extents.m in Sources */,
+				84781D3A1C7413330088AB85 /* NewsItemCell.m in Sources */,
+				84781D8D1C7415F80088AB85 /* FDViewController.m in Sources */,
+				84781DA91C741DDB0088AB85 /* AboutViewController.m in Sources */,
+				84781D8F1C7415F80088AB85 /* NewsChannelSelectViewController.m in Sources */,
+				84781D5C1C7414270088AB85 /* RSSItemModel.m in Sources */,
+				84781D8C1C7415F80088AB85 /* FDTableViewController.m in Sources */,
+				84781D901C7415F80088AB85 /* NewsListViewController.m in Sources */,
+				84781D621C74144C0088AB85 /* SinaRSSApi.m in Sources */,
+				84781D391C7413330088AB85 /* FDTableViewCell.m in Sources */,
+				84781D9E1C7416CC0088AB85 /* XWindowStack.m in Sources */,
+				84781D8E1C7415F80088AB85 /* FDWebViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		84781D181C740ED80088AB85 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84781D191C740ED80088AB85 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84781D1D1C740ED80088AB85 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84781D1E1C740ED80088AB85 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84781D211C740ED80088AB85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84781D221C740ED80088AB85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84781D241C740ED80088AB85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D9794FE096853E0152A31D4 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "./SinaNews/SinaNews-PrefixHeader.pch";
+				INFOPLIST_FILE = SinaNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gshe.SinaNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84781D251C740ED80088AB85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8B3EB3E01141D017AD72E48 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "./SinaNews/SinaNews-PrefixHeader.pch";
+				INFOPLIST_FILE = SinaNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gshe.SinaNews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84781D071C740ED80088AB85 /* Build configuration list for PBXProject "SinaNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84781D211C740ED80088AB85 /* Debug */,
+				84781D221C740ED80088AB85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84781D231C740ED80088AB85 /* Build configuration list for PBXNativeTarget "SinaNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84781D241C740ED80088AB85 /* Debug */,
+				84781D251C740ED80088AB85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84781D041C740ED80088AB85 /* Project object */;
+}
