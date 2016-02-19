@@ -11,10 +11,12 @@
 @end
 
 @interface RSSItemModel : JSONModel
-@property (nonatomic, strong) NSString *author;
-@property (nonatomic, strong) NSString *newsDesc;
-@property (nonatomic, strong) NSString *guid;
-@property (nonatomic, strong) NSString *link;
-@property (nonatomic, strong) NSString *pubDate;
-@property (nonatomic, strong) NSString *title;
+@property(nonatomic, strong) NSString *author;
+@property(nonatomic, strong) NSString *newsDesc;
+@property(nonatomic, strong) NSString *guid;
+@property(nonatomic, strong) NSString *link;
+@property(nonatomic, strong) NSDate *pubDate;
+@property(nonatomic, strong) NSString *title;
+
+@property(nonatomic, strong, readonly) NSString *pubDateStr;
 @end

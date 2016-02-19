@@ -99,7 +99,7 @@
   self.userData = (NewsItemCellUserData *)object.userInfo;
   self.title.text = self.userData.newsItem.title;
   self.desc.text = self.userData.newsItem.newsDesc;
-  self.pubDate.text = self.userData.newsItem.pubDate;
+  self.pubDate.text = self.userData.newsItem.pubDateStr;
   return YES;
 }
 

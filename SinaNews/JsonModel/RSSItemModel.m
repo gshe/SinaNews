@@ -23,4 +23,10 @@
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
   return YES;
 }
+
+- (NSString *)pubDateStr {
+  NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+  [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+  return [formatter stringFromDate:_pubDate];
+}
 @end

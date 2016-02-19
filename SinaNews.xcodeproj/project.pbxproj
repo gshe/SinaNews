@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		846329271C76B01A00EC291E /* RSSItemDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 846329261C76B01A00EC291E /* RSSItemDatabase.m */; };
+		8463292A1C76B02B00EC291E /* RSSItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 846329291C76B02B00EC291E /* RSSItemManager.m */; };
+		8463292D1C76B57000EC291E /* JSONValueTransformer+CustomTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8463292C1C76B57000EC291E /* JSONValueTransformer+CustomTransformer.m */; };
 		84781D111C740ED80088AB85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D101C740ED80088AB85 /* main.m */; };
 		84781D141C740ED80088AB85 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D131C740ED80088AB85 /* AppDelegate.m */; };
 		84781D1A1C740ED80088AB85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84781D181C740ED80088AB85 /* Main.storyboard */; };
@@ -43,6 +46,12 @@
 
 /* Begin PBXFileReference section */
 		539BA799B937CC19C11FB44C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		846329251C76B01A00EC291E /* RSSItemDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItemDatabase.h; sourceTree = "<group>"; };
+		846329261C76B01A00EC291E /* RSSItemDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItemDatabase.m; sourceTree = "<group>"; };
+		846329281C76B02B00EC291E /* RSSItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItemManager.h; sourceTree = "<group>"; };
+		846329291C76B02B00EC291E /* RSSItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItemManager.m; sourceTree = "<group>"; };
+		8463292B1C76B57000EC291E /* JSONValueTransformer+CustomTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+CustomTransformer.h"; sourceTree = "<group>"; };
+		8463292C1C76B57000EC291E /* JSONValueTransformer+CustomTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+CustomTransformer.m"; sourceTree = "<group>"; };
 		84781D0C1C740ED80088AB85 /* SinaNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinaNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84781D101C740ED80088AB85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84781D121C740ED80088AB85 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +138,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		846329241C76AD5A00EC291E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				846329251C76B01A00EC291E /* RSSItemDatabase.h */,
+				846329261C76B01A00EC291E /* RSSItemDatabase.m */,
+				846329281C76B02B00EC291E /* RSSItemManager.h */,
+				846329291C76B02B00EC291E /* RSSItemManager.m */,
+			);
+			name = Database;
+			path = Utils/Database;
+			sourceTree = "<group>";
+		};
 		84781D031C740ED80088AB85 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +171,7 @@
 		84781D0E1C740ED80088AB85 /* SinaNews */ = {
 			isa = PBXGroup;
 			children = (
+				846329241C76AD5A00EC291E /* Database */,
 				84781D9F1C7417A10088AB85 /* category */,
 				84781D921C7416CC0088AB85 /* view */,
 				84781D7E1C7415F80088AB85 /* ViewController */,
@@ -212,6 +234,8 @@
 				84781D571C7414270088AB85 /* RSSRoot.m */,
 				84781D581C7414270088AB85 /* RSSSubChannel.h */,
 				84781D591C7414270088AB85 /* RSSSubChannel.m */,
+				8463292B1C76B57000EC291E /* JSONValueTransformer+CustomTransformer.h */,
+				8463292C1C76B57000EC291E /* JSONValueTransformer+CustomTransformer.m */,
 			);
 			path = JsonModel;
 			sourceTree = "<group>";
@@ -429,6 +453,7 @@
 				84781D9C1C7416CC0088AB85 /* PopupBaseView.m in Sources */,
 				84781D681C74148B0088AB85 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				84781D911C7415F80088AB85 /* NewsViewController.m in Sources */,
+				846329271C76B01A00EC291E /* RSSItemDatabase.m in Sources */,
 				84781D9B1C7416CC0088AB85 /* AreaPickView.m in Sources */,
 				84781D7C1C74150A0088AB85 /* UIColor+Extents.m in Sources */,
 				84781D141C740ED80088AB85 /* AppDelegate.m in Sources */,
@@ -441,9 +466,11 @@
 				84781D7D1C74150A0088AB85 /* XMDeveloperHelper.m in Sources */,
 				84781D5B1C7414270088AB85 /* RSSChannelDetail.m in Sources */,
 				84781DA31C7417A10088AB85 /* NSString+Extents.m in Sources */,
+				8463292A1C76B02B00EC291E /* RSSItemManager.m in Sources */,
 				84781D3A1C7413330088AB85 /* NewsItemCell.m in Sources */,
 				84781D8D1C7415F80088AB85 /* FDViewController.m in Sources */,
 				84781DA91C741DDB0088AB85 /* AboutViewController.m in Sources */,
+				8463292D1C76B57000EC291E /* JSONValueTransformer+CustomTransformer.m in Sources */,
 				84781D8F1C7415F80088AB85 /* NewsChannelSelectViewController.m in Sources */,
 				84781D5C1C7414270088AB85 /* RSSItemModel.m in Sources */,
 				84781D8C1C7415F80088AB85 /* FDTableViewController.m in Sources */,

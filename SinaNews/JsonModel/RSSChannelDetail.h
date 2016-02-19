@@ -13,4 +13,7 @@
 @property(nonatomic, strong) NSArray<RSSItemModel> *item;
 @property(nonatomic, strong) NSString *copyright;
 @property(nonatomic, strong) NSString *channelDesc;
+@property(nonatomic, strong) NSString *generator;
+@property(nonatomic, strong) NSString *imageUrl;
+@property(nonatomic, strong) NSDate *pubDate;
 @end

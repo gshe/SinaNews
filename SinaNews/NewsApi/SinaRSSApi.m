@@ -12,7 +12,7 @@
 
 @implementation SinaRSSApi
 - (void)queryChannelsWithsuccess:(void (^)(RSSRoot *ret))successBlock
-                              failed:(void (^)(NSError *error))failedBlock;
+                          failed:(void (^)(NSError *error))failedBlock;
 {
   NSURL *url =
       [NSURL URLWithString:@"http://rss.sina.com.cn/sina_all_opml.xml"];
@@ -39,10 +39,10 @@
   [operation start];
 }
 
-- (void)loadItemsWithUrl:(NSString *)urlStr
-                success:(void (^)(RSSChannelDetail *ret))successBlock
-                 failed:(void (^)(NSError *error))failedBlock {
-  NSURL *url = [NSURL URLWithString:urlStr];
+- (void)loadItemsWithSubChannel:(RSSSubChannel *)channel
+                        success:(void (^)(RSSChannelDetail *ret))successBlock
+                         failed:(void (^)(NSError *error))failedBlock {
+  NSURL *url = [NSURL URLWithString:channel.xmlUrl];
   NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
   // 2
@@ -52,14 +52,20 @@
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation,
                                              NSXMLParser *xmlParser) {
     NSError *error;
-    NSDictionary *dic = [NSDictionary dictionaryWithXMLParser:xmlParser];
-    RSSChannelDetail *channel =
-        [[RSSChannelDetail alloc] initWithDictionary:dic error:&error];
-    if (!error) {
-      successBlock(channel);
-    } else {
-      failedBlock(error);
+    RSSChannelDetail *channel;
+    @try {
+      NSDictionary *dic = [NSDictionary dictionaryWithXMLParser:xmlParser];
+      channel = [[RSSChannelDetail alloc] initWithDictionary:dic error:&error];
+      if (!error) {
+        successBlock(channel);
+      } else {
+        failedBlock(error);
+      }
+    } @catch (NSException *exception) {
+      failedBlock(nil);
+    } @finally {
     }
+
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     failedBlock(error);
   }];

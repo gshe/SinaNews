@@ -21,6 +21,9 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - FLEX (2.1.1)
+  - FMDB (2.6):
+    - FMDB/standard (= 2.6)
+  - FMDB/standard (2.6)
   - ICViewPager (1.5.1)
   - JSONModel (1.1.2)
   - Masonry (0.6.4)
@@ -97,6 +100,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
   - FLEX (~> 2.0)
+  - FMDB
   - ICViewPager
   - JSONModel (~> 1.1.2)
   - Masonry (~> 0.6.3)
@@ -110,6 +114,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
+  FMDB: c1968bab3ab0aed38f66cb778ae1e7fa9a652b6e
   ICViewPager: 032dc71a50fe898e185fae6112ded4bed0e0523c
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2

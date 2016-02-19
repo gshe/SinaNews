@@ -7,14 +7,13 @@
 //
 
 #import "NewsViewController.h"
-#import "SinaRSSApi.h"
+#import "RSSItemManager.h"
 #import "NewsListViewController.h"
 #import "MMDrawerBarButtonItem.h"
 #import "UIViewController+MMDrawerController.h"
 #import "SettingsTableViewController.h"
 
 @interface NewsViewController () <ViewPagerDelegate, ViewPagerDataSource>
-@property(nonatomic, strong) SinaRSSApi *newsApi;
 @property(nonatomic, strong) RSSRoot *rssRoot;
 @property(nonatomic, strong) RSSChannel *curChannel;
 @end
@@ -28,8 +27,7 @@
   self.dataSource = self;
   self.delegate = self;
 
-  self.newsApi = [[SinaRSSApi alloc] init];
-  [self.newsApi queryChannelsWithsuccess:^(RSSRoot *ret) {
+  [[RSSItemManager sharedInstance] queryChannelsWithsuccess:^(RSSRoot *ret) {
     self.rssRoot = ret;
     self.curChannel = ret.channel[0];
     self.title = self.curChannel.title;
@@ -67,7 +65,9 @@
     viewForTabAtIndex:(NSUInteger)index {
   UILabel *label = [UILabel new];
   RSSSubChannel *category = self.curChannel.subChannel[index];
-  label.text = category.title;
+
+  label.text = category.title.length > 4 ? [category.title substringToIndex:4]
+                                         : category.title;
   label.backgroundColor = [UIColor clearColor];
   [label sizeToFit];
 
@@ -121,12 +121,13 @@
 }
 
 - (void)channelSelected:(RSSChannel *)selectedChannel {
-  [self.mm_drawerController closeDrawerAnimated:YES
-                                     completion:^(BOOL finished) {
-                                       self.curChannel = selectedChannel;
-                                       self.title = self.curChannel.title;
-                                       [self reloadData];
-                                     }];
+  [self.mm_drawerController
+      closeDrawerAnimated:YES
+               completion:^(BOOL finished) {
+                 self.curChannel = selectedChannel;
+                 self.title = self.curChannel.title;
+                 [self performSelector:@selector(reloadData) withObject:nil];
+               }];
 }
 
 @end

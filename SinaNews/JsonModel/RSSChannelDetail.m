@@ -14,6 +14,9 @@
     @"channel.item" : @"item",
     @"channel.copyright" : @"copyright",
     @"channel.description" : @"channelDesc",
+    @"channel.generator" : @"generator",
+    @"channel.image.url" : @"imageUrl",
+    @"channel.pubDate" : @"pubDate",
   }];
 }
 

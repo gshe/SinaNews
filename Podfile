@@ -14,6 +14,7 @@ pod 'Nimbus','~> 1.3.0'
 pod 'ICViewPager'
 pod 'MJRefresh'
 pod 'XMLDictionary'
+pod 'FMDB'
 
 target 'SinaNews' do
 

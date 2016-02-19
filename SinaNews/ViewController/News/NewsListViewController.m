@@ -7,28 +7,32 @@
 //
 
 #import "NewsListViewController.h"
-#import "SinaRSSApi.h"
+#import "RSSItemManager.h"
 #import "NewsItemCell.h"
 #import "FDWebViewController.h"
 #import "MJRefresh.h"
 
 @interface NewsListViewController ()
-@property(nonatomic, strong) RSSChannelDetail *rssItems;
-@property(nonatomic, strong) SinaRSSApi *rssApi;
-
+@property(nonatomic, strong) RSSChannelDetail *channelDetail;
+@property(nonatomic, strong) NSMutableArray<RSSItemModel> *rssItems;
 @property(nonatomic, strong) NITableViewActions *action;
+@property(nonatomic, assign) NSInteger curPage;
 @end
 
 @implementation NewsListViewController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.rssApi = [[SinaRSSApi alloc] init];
+  self.curPage = 1;
+  self.rssItems = [@[] mutableCopy];
   [self udpateNews];
   self.tableView.mj_header =
       [MJRefreshNormalHeader headerWithRefreshingTarget:self
                                        refreshingAction:@selector(loadNewData)];
   [self.tableView.mj_header beginRefreshing];
+  self.tableView.mj_footer = [MJRefreshAutoNormalFooter
+      footerWithRefreshingTarget:self
+                refreshingAction:@selector(loadMoreData)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,10 +40,18 @@
 }
 
 - (void)loadNewData {
-  [self.rssApi loadItemsWithUrl:self.subChannel.xmlUrl
-      success:^(RSSChannelDetail *ret) {
-        self.rssItems = ret;
+  self.curPage = 1;
+  [[RSSItemManager sharedInstance] getRssItem:self.subChannel
+      page:self.curPage
+      pageCount:20
+      success:^(NSArray<RSSItemModel> *ret, RSSChannelDetail *detail) {
+        self.channelDetail = detail;
+        [self.rssItems removeAllObjects];
+        [self.rssItems addObjectsFromArray:ret];
         [self udpateNews];
+        if (ret.count < 20) {
+          [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        }
         [self.tableView.mj_header endRefreshing];
       }
       failed:^(NSError *error) {
@@ -48,11 +60,31 @@
       }];
 }
 
+- (void)loadMoreData {
+  self.curPage++;
+  [[RSSItemManager sharedInstance] getRssItem:self.subChannel
+      page:self.curPage
+      pageCount:20
+      success:^(NSArray<RSSItemModel> *ret, RSSChannelDetail *detail) {
+        [self.rssItems addObjectsFromArray:ret];
+        [self udpateNews];
+        if (ret.count < 20) {
+          [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        } else {
+          [self.tableView.mj_footer endRefreshing];
+        }
+      }
+      failed:^(NSError *error) {
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+        [self showError:error];
+      }];
+}
+
 - (void)udpateNews {
   NSMutableArray *contents = [@[] mutableCopy];
   self.action = [[NITableViewActions alloc] initWithTarget:self];
   if (self.rssItems) {
-    for (RSSItemModel *item in self.rssItems.item) {
+    for (RSSItemModel *item in self.rssItems) {
       NewsItemCellUserData *userData = [[NewsItemCellUserData alloc] init];
       userData.newsItem = item;
       [contents
