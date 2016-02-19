@@ -17,6 +17,7 @@
 @property(nonatomic, strong) NSString *link;
 @property(nonatomic, strong) NSDate *pubDate;
 @property(nonatomic, strong) NSString *title;
-
+@property(nonatomic, assign) BOOL isRead;
+@property(nonatomic, assign) long long dbId;
 @property(nonatomic, strong, readonly) NSString *pubDateStr;
 @end

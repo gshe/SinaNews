@@ -14,6 +14,7 @@
 @property(nonatomic, strong) UILabel *title;
 @property(nonatomic, strong) UILabel *desc;
 @property(nonatomic, strong) UILabel *pubDate;
+@property(nonatomic, strong) UIImageView *nonReadImageView;
 @end
 
 @implementation NewsItemCell
@@ -41,11 +42,13 @@
     self.pubDate.textColor = [UIColor ex_subTextColor];
     self.pubDate.textAlignment = NSTextAlignmentRight;
 
+    self.nonReadImageView = [[UIImageView alloc] init];
+    self.nonReadImageView.image = [UIImage imageNamed:@"new"];
     self.clipsToBounds = YES;
     [self.contentView addSubview:self.title];
     [self.contentView addSubview:self.desc];
     [self.contentView addSubview:self.pubDate];
-
+    [self.contentView addSubview:self.nonReadImageView];
     [self makeConstraint];
   }
   return self;
@@ -68,6 +71,12 @@
     make.bottom.equalTo(self.contentView).offset(-5);
     make.left.equalTo(self.contentView).offset(15);
     make.right.equalTo(self.contentView).offset(-15);
+  }];
+  [self.nonReadImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.right.equalTo(self.contentView).offset(-5);
+    make.top.equalTo(self.contentView).offset(5);
+    make.height.mas_equalTo(22);
+    make.width.mas_equalTo(22);
   }];
 }
 
@@ -100,6 +109,11 @@
   self.title.text = self.userData.newsItem.title;
   self.desc.text = self.userData.newsItem.newsDesc;
   self.pubDate.text = self.userData.newsItem.pubDateStr;
+  if (self.userData.newsItem.isRead) {
+    self.nonReadImageView.hidden = YES;
+  } else {
+    self.nonReadImageView.hidden = NO;
+  }
   return YES;
 }
 

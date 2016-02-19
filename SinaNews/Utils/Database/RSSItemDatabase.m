@@ -72,7 +72,7 @@
     TEXT)",
     @"CREATE TABLE IF NOT EXISTS RSSItem (id INTEGER \
     PRIMARY KEY AUTOINCREMENT, channelId INTEGER, author TEXT, newsDesc \
-    TEXT, guid TEXT, link TEXT, pubDate TIMESTAMP, title TEXT)",
+    TEXT, guid TEXT, link TEXT, pubDate TIMESTAMP, title TEXT, isRead INTEGER)",
     @"CREATE INDEX ON RSSItem(pubDate)",
     @"CREATE INDEX ON RSSItem(link)",
     @"CREATE INDEX ON RSSChannel(xmlUrl)"
@@ -84,13 +84,13 @@
   return YES;
 }
 
-- (BOOL)insertRssItem:(RSSItemModel *)item withChannelId:(long)channelId {
+- (BOOL)insertRssItem:(RSSItemModel *)item withChannelId:(long long)channelId {
   NSString *sql = @"INSERT INTO RSSItem(channelId, author, newsDesc, "
-      @"guid, link, pubDate, title) VALUES(?, ?, ?, ?, ?, ?, ?)";
+      @"guid, link, pubDate, title, isRead) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
   ;
-  return
-      [_database executeUpdate:sql, @(channelId), item.author, item.newsDesc,
-                               item.guid, item.link, item.pubDate, item.title];
+  return [_database executeUpdate:sql, @(channelId), item.author, item.newsDesc,
+                                  item.guid, item.link, item.pubDate,
+                                  item.title, @(0)];
 }
 
 - (BOOL)insertRssChannel:(RSSSubChannel *)channel {
@@ -101,25 +101,25 @@
                                   channel.text, channel.htmlUrl, channel.type];
 }
 
-- (long)getRssChannelId:(RSSSubChannel *)channel {
+- (long long)getRssChannelId:(RSSSubChannel *)channel {
   NSString *sql =
       [NSString stringWithFormat:@"SELECT id FROM RSSChannel WHERE xmlUrl='%@'",
                                  channel.xmlUrl];
   FMResultSet *rs = [_database executeQuery:sql];
-  long channelId = -1;
+  long long channelId = -1;
   if ([rs next]) {
-    channelId = [rs intForColumnIndex:0];
+    channelId = [rs longLongIntForColumnIndex:0];
   }
   return channelId;
 }
 
-- (long)getRssItemId:(RSSItemModel *)item {
+- (long long)getRssItemId:(RSSItemModel *)item {
   NSString *sql = [NSString
       stringWithFormat:@"SELECT id FROM RSSItem WHERE link='%@'", item.link];
   FMResultSet *rs = [_database executeQuery:sql];
-  long channelId = -1;
+  long long channelId = -1;
   if ([rs next]) {
-    channelId = [rs intForColumnIndex:0];
+    channelId = [rs longLongIntForColumnIndex:0];
   }
   return channelId;
 }
@@ -133,7 +133,7 @@
   }
 
   for (RSSItemModel *item in items.item) {
-    long itemId = [self getRssItemId:item];
+    long long itemId = [self getRssItemId:item];
     if (itemId < 0) {
       [self insertRssItem:item withChannelId:channelId];
     }
@@ -146,13 +146,15 @@
   NSMutableArray<RSSItemModel> *items = [@[] mutableCopy];
   long channelId = [self getRssChannelId:channel];
   NSString *sql = [NSString
-      stringWithFormat:@"SELECT author, newsDesc, "
-                       @"guid, link, pubDate, title FROM RSSItem WHERE "
+      stringWithFormat:@"SELECT id, author, newsDesc, "
+                       @"guid, link, pubDate, title, isRead FROM RSSItem WHERE "
                        @"channelId=%ld ORDER BY pubDate limit %ld offset %ld",
                        channelId, pageCount, (pageIndex - 1) * pageCount];
   FMResultSet *rs = [_database executeQuery:sql];
   while ([rs next]) {
     RSSItemModel *item = [[RSSItemModel alloc] init];
+    item.dbId = [rs longLongIntForColumn:@"id"];
+    item.isRead = [rs intForColumn:@"isRead"] ? YES : NO;
     item.author = [rs stringForColumn:@"author"];
     item.newsDesc = [rs stringForColumn:@"newsDesc"];
     item.guid = [rs stringForColumn:@"guid"];
@@ -162,5 +164,10 @@
     [items addObject:item];
   }
   return items;
+}
+
+- (void)rssItemIsRead:(RSSItemModel *)item {
+  [_database executeUpdate:@"UPDATE RSSItem SET isRead = ? WHERE id = ?", @(1),
+                           @(item.dbId)];
 }
 @end

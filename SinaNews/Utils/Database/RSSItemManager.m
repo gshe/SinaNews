@@ -75,4 +75,8 @@
   }
 }
 
+- (void)rssItemIsRead:(RSSItemModel *)item {
+  [_database rssItemIsRead:item];
+}
+
 @end

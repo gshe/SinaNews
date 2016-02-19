@@ -108,5 +108,10 @@
   webVC.urlString = item.link;
   webVC.title = item.title;
   [self.navigationController pushViewController:webVC animated:YES];
+  [[RSSItemManager sharedInstance] rssItemIsRead:item];
+  item.isRead = YES;
+  NSIndexPath *indexPath = [self.model indexPathForObject:sender];
+  [self.tableView reloadRowsAtIndexPaths:@[ indexPath ]
+                        withRowAnimation:UITableViewRowAnimationFade];
 }
 @end

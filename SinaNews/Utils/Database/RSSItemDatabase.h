@@ -19,5 +19,5 @@
                          page:(NSInteger)pageIndex
                     pageCount:(NSInteger)pageCount;
 
-
+- (void)rssItemIsRead:(RSSItemModel *)item;
 @end

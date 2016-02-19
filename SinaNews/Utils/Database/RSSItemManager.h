@@ -15,12 +15,14 @@
 
 + (instancetype)sharedInstance;
 - (void)queryChannelsWithsuccess:(void (^)(RSSRoot *ret))successBlock
-						  failed:(void (^)(NSError *error))failedBlock;
+                          failed:(void (^)(NSError *error))failedBlock;
 
 - (void)getRssItem:(RSSSubChannel *)channel
               page:(NSInteger)pageIndex
          pageCount:(NSInteger)pageCount
-           success:(void (^)(NSArray<RSSItemModel>  *ret, RSSChannelDetail *detail))successBlock
+           success:(void (^)(NSArray<RSSItemModel> *ret,
+                             RSSChannelDetail *detail))successBlock
             failed:(void (^)(NSError *error))failedBlock;
 
+- (void)rssItemIsRead:(RSSItemModel *)item;
 @end
