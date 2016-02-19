@@ -126,7 +126,7 @@
                completion:^(BOOL finished) {
                  self.curChannel = selectedChannel;
                  self.title = self.curChannel.title;
-                 [self performSelector:@selector(reloadData) withObject:nil];
+                 [self reloadData];
                }];
 }
 
