@@ -15,7 +15,6 @@
 		84781D1A1C740ED80088AB85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84781D181C740ED80088AB85 /* Main.storyboard */; };
 		84781D1C1C740ED80088AB85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84781D1B1C740ED80088AB85 /* Assets.xcassets */; };
 		84781D1F1C740ED80088AB85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84781D1D1C740ED80088AB85 /* LaunchScreen.storyboard */; };
-		84781D271C740FFC0088AB85 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 84781D261C740FFC0088AB85 /* launch.png */; };
 		84781D391C7413330088AB85 /* FDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D351C7413330088AB85 /* FDTableViewCell.m */; };
 		84781D3A1C7413330088AB85 /* NewsItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D381C7413330088AB85 /* NewsItemCell.m */; };
 		84781D5A1C7414270088AB85 /* RSSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781D511C7414270088AB85 /* RSSChannel.m */; };
@@ -41,6 +40,8 @@
 		84781DA31C7417A10088AB85 /* NSString+Extents.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781DA21C7417A10088AB85 /* NSString+Extents.m */; };
 		84781DA61C741D010088AB85 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781DA51C741D010088AB85 /* SettingsTableViewController.m */; };
 		84781DA91C741DDB0088AB85 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84781DA81C741DDB0088AB85 /* AboutViewController.m */; };
+		848A75461C7B0165000B01B7 /* FDCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 848A75451C7B0165000B01B7 /* FDCacheHelper.m */; };
+		848A75481C7B08EA000B01B7 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = 848A75471C7B08EA000B01B7 /* launch.png */; };
 		934C995E5BFE34BD3CD15E49 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 539BA799B937CC19C11FB44C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +61,6 @@
 		84781D1B1C740ED80088AB85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84781D1E1C740ED80088AB85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84781D201C740ED80088AB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84781D261C740FFC0088AB85 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		84781D321C7411F30088AB85 /* SinaNews-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SinaNews-PrefixHeader.pch"; sourceTree = "<group>"; };
 		84781D341C7413330088AB85 /* FDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTableViewCell.h; sourceTree = "<group>"; };
 		84781D351C7413330088AB85 /* FDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTableViewCell.m; sourceTree = "<group>"; };
@@ -113,6 +113,9 @@
 		84781DA51C741D010088AB85 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		84781DA71C741DDB0088AB85 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		84781DA81C741DDB0088AB85 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		848A75441C7B0165000B01B7 /* FDCacheHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDCacheHelper.h; sourceTree = "<group>"; };
+		848A75451C7B0165000B01B7 /* FDCacheHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDCacheHelper.m; sourceTree = "<group>"; };
+		848A75471C7B08EA000B01B7 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 		9D9794FE096853E0152A31D4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B3EB3E01141D017AD72E48 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,10 +196,10 @@
 		84781D0F1C740ED80088AB85 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				848A75471C7B08EA000B01B7 /* launch.png */,
 				84781D121C740ED80088AB85 /* AppDelegate.h */,
 				84781D131C740ED80088AB85 /* AppDelegate.m */,
 				84781D201C740ED80088AB85 /* Info.plist */,
-				84781D261C740FFC0088AB85 /* launch.png */,
 				84781D101C740ED80088AB85 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -258,6 +261,8 @@
 				84781D781C74150A0088AB85 /* UIColor+Extents.m */,
 				84781D791C74150A0088AB85 /* XMDeveloperHelper.h */,
 				84781D7A1C74150A0088AB85 /* XMDeveloperHelper.m */,
+				848A75441C7B0165000B01B7 /* FDCacheHelper.h */,
+				848A75451C7B0165000B01B7 /* FDCacheHelper.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -387,7 +392,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84781D271C740FFC0088AB85 /* launch.png in Resources */,
+				848A75481C7B08EA000B01B7 /* launch.png in Resources */,
 				84781D1F1C740ED80088AB85 /* LaunchScreen.storyboard in Resources */,
 				84781D1C1C740ED80088AB85 /* Assets.xcassets in Resources */,
 				84781D1A1C740ED80088AB85 /* Main.storyboard in Resources */,
@@ -452,6 +457,7 @@
 				84781D5A1C7414270088AB85 /* RSSChannel.m in Sources */,
 				84781D9C1C7416CC0088AB85 /* PopupBaseView.m in Sources */,
 				84781D681C74148B0088AB85 /* MMExampleDrawerVisualStateManager.m in Sources */,
+				848A75461C7B0165000B01B7 /* FDCacheHelper.m in Sources */,
 				84781D911C7415F80088AB85 /* NewsViewController.m in Sources */,
 				846329271C76B01A00EC291E /* RSSItemDatabase.m in Sources */,
 				84781D9B1C7416CC0088AB85 /* AreaPickView.m in Sources */,
@@ -598,6 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gshe.SinaNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -613,6 +620,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gshe.SinaNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

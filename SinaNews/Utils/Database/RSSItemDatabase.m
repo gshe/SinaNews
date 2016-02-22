@@ -148,7 +148,7 @@
   NSString *sql = [NSString
       stringWithFormat:@"SELECT id, author, newsDesc, "
                        @"guid, link, pubDate, title, isRead FROM RSSItem WHERE "
-                       @"channelId=%ld ORDER BY pubDate limit %ld offset %ld",
+                       @"channelId=%ld ORDER BY pubDate DESC LIMIT %ld OFFSET %ld",
                        channelId, pageCount, (pageIndex - 1) * pageCount];
   FMResultSet *rs = [_database executeQuery:sql];
   while ([rs next]) {

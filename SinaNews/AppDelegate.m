@@ -11,6 +11,7 @@
 #import "NewsChannelSelectViewController.h"
 #import "MMDrawerController.h"
 #import "MMExampleDrawerVisualStateManager.h"
+#import "AFNetworkActivityIndicatorManager.h"
 
 @interface AppDelegate ()
 
@@ -60,10 +61,20 @@
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
-  [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:236 / 255.0
-                                                             green:190 / 255.0
-                                                              blue:146 / 255.0
-                                                             alpha:0.9]];
+  NSURLCache *cache =
+      [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
+                                    diskCapacity:100 * 1024 * 1024
+                                        diskPath:nil];
+  [NSURLCache setSharedURLCache:cache];
+
+  // AFNetworking
+  [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+
+  [[UINavigationBar appearance]
+      setBackgroundColor:[UIColor colorWithRed:236 / 255.0
+                                         green:190 / 255.0
+                                          blue:146 / 255.0
+                                         alpha:0.9]];
   UIViewController *rootVC = [self getRootViewController];
   self.window.rootViewController = rootVC;
   [self.window makeKeyAndVisible];
