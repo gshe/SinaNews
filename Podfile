@@ -15,6 +15,7 @@ pod 'ICViewPager'
 pod 'MJRefresh'
 pod 'XMLDictionary'
 pod 'FMDB'
+pod 'NJKWebViewProgress'
 
 target 'SinaNews' do
 
