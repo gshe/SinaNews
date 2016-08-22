@@ -30,6 +30,7 @@
     self.webView = [[UIWebView alloc] init];
     self.webView.delegate = self;
     _stopButton = nil;
+
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
         initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                              target:self
