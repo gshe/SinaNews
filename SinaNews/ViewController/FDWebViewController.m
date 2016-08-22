@@ -32,6 +32,7 @@
     //_stopButton = nil;
     //
     //
+    //
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
         initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                              target:self
