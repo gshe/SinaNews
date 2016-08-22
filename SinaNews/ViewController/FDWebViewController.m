@@ -33,6 +33,8 @@
     //
     //
     //
+    //add other GID_MAX
+    _stopButton.isEnabled = YES;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
         initWithBarButtonSystemItem:UIBarButtonSystemItemAction
                              target:self
